@@ -9,7 +9,7 @@ final class MinimalNetworkingTests: XCTestCase {
         let name: String
     }
     let testBaseURL = URL(string: "https://raw.githubusercontent.com/mokagio/tddinswift_fake_api/trunk")!
-    let testEndpoint = Endpoint(path: "dish_of_the_day.json", resourceType: MenuItem.self)
+    let testEndpoint = Endpoint<MenuItem>(path: "dish_of_the_day.json")
 
     func testMinimalNetworkingAgainstLiveURL() {
         let expectation = XCTestExpectation(description: "Receives and decodes data from real endpoint")

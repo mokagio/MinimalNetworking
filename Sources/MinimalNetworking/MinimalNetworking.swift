@@ -13,11 +13,10 @@ public protocol NetworkFetching {
 public struct Endpoint<Resource: Decodable> {
 
     public let path: String
-    public let resourceType: Resource.Type
+    public let resourceType: Resource.Type = Resource.self
 
-    public init(path: String, resourceType: Resource.Type) {
+    public init(path: String) {
         self.path = path
-        self.resourceType = resourceType
     }
 
     public func urlRequest(with baseURL: URL) -> URLRequest {
