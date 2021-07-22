@@ -5,6 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "MinimalNetworking",
+    // This library is built on top of Combine, hence the version requirement.
+    platforms: [
+        .macOS(.v10_15), .iOS(.v13), .tvOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
