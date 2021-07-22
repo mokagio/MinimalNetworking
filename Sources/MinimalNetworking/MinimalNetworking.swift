@@ -15,6 +15,11 @@ public struct Endpoint<Resource: Decodable> {
     public let path: String
     public let resourceType: Resource.Type
 
+    public init(path: String, resourceType: Resource.Type) {
+        self.path = path
+        self.resourceType = resourceType
+    }
+
     public func urlRequest(with baseURL: URL) -> URLRequest {
         URLRequest(url: baseURL.appendingPathComponent(path))
     }

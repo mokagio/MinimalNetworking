@@ -1,6 +1,6 @@
 import Combine
 import XCTest
-@testable import MinimalNetworking
+import MinimalNetworking
 
 final class MinimalNetworkingTests: XCTestCase {
 
